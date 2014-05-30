@@ -6,20 +6,20 @@
 
 makeCacheMatrix <- function(x = matrix()) {
         inv<-NULL
-        set <-function(y){
+        set <-function(y){    # set the matrix, init inv
                 x<<-y
                 inv<<-NULL
         }
-        get <-function(){
+        get <-function(){    # get the matrix
                 x
         }
-        setinv<-function(inverse){
+        setinv<-function(inverse){   #set inv
                 inv<<-inverse
         }
-        getinv<-function(){
+        getinv<-function(){    # get cached inv
                 inv
         }
-        list(set=set,
+        list(set=set,      #special list with four functions
              get=get,
              setinv=setinv,
              getinv=getinv)
